@@ -84,6 +84,6 @@ stages:
             - task: AzureWebApp@1
               displayName: 'AzDO-Service-Connection-Policyteam-Sandbox-Scratchpad'
               inputs:
-                azureSubscription: 'Resource Manager - Tailspin - Space Game'
+                azureSubscription: 'AzDO-Service-Connection-Policyteam-Sandbox-Scratchpad'
                 appName: '$(WebAppName)'
                 package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
