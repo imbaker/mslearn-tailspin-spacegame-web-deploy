@@ -74,7 +74,7 @@ stages:
         vmImage: 'ubuntu-20.04'
       environment: dev
       variables:
-      - group: Release
+      - group: imbaker-release
       strategy:
         runOnce:
           deploy:
@@ -82,7 +82,7 @@ stages:
             - download: current
               artifact: drop
             - task: AzureWebApp@1
-              displayName: 'AzDO-Service-Connection-Policyteam-Sandbox-Scratchpad'
+              displayName: 'Azure App Service Deploy: website'
               inputs:
                 azureSubscription: 'AzDO-Service-Connection-Policyteam-Sandbox-Scratchpad'
                 appName: '$(WebAppName)'
